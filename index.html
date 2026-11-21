@@ -626,7 +626,7 @@ footer ul { list-style: none; padding: 0; margin: 9px 0 0; display: grid; gap: 4
       <p>College of Information Technology and Engineering<br>
          La Consolacion University Philippines<br>
          City of Malolos, Bulacan</p>
-      <p style="margin-top:9px"><a href="mailto:cite@email.lcup.edu.ph">cite@email.lcup.edu.ph</a></p>
+      <p style="margin-top:9px"><a href="mailto:citesc@email.lcup.edu.ph">citesc@email.lcup.edu.ph</a></p>
       <p style="margin-top:9px">S.Y. 2026–2027</p>
     </div>
   </div>
@@ -783,12 +783,12 @@ footer ul { list-style: none; padding: 0; margin: 9px 0 0; display: grid; gap: 4
       } else if (response.status === 409) {
         say('There is already a request from that address waiting to be reviewed.', 'bad');
       } else {
-        say('The server refused that request. Email cite@email.lcup.edu.ph instead.', 'bad');
+        say('The server refused that request. Email citesc@email.lcup.edu.ph instead.', 'bad');
       }
     }).catch(function () {
       // Offline, DNS, CORS — the visitor cannot tell these apart and
       // does not need to. Give them the way through that always works.
-      say('Could not reach the server. Email cite@email.lcup.edu.ph instead.', 'bad');
+      say('Could not reach the server. Email citesc@email.lcup.edu.ph instead.', 'bad');
     }).finally(function () {
       submit.disabled = false;
     });
