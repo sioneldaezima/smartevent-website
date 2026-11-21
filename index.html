@@ -303,6 +303,20 @@ footer h3 { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; te
 footer p, footer li { font-size: 14px; color: var(--muted); }
 footer ul { list-style: none; padding: 0; margin: 9px 0 0; display: grid; gap: 4px; }
 .kv { display: flex; justify-content: space-between; gap: 12px; max-width: 250px; }
+/* A name that goes somewhere should look like it does, and the one
+   that does not should not look broken — it is simply not a link. */
+.people a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--orange);
+  padding-bottom: 1px;
+}
+.people a:hover { color: var(--orange); }
+.people a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.people a span { font-size: 11px; color: var(--orange); }
 .kv b { font-weight: 500; color: var(--fg); }
 
 /* ── phone ───────────────────────────────────────────────────── */
@@ -612,14 +626,15 @@ footer ul { list-style: none; padding: 0; margin: 9px 0 0; display: grid; gap: 4
     </div>
     <div>
       <h3>The researchers</h3>
-      <ul>
-        <li>Rohn Monrhey Bañares</li>
-        <li>John Paul Buffe</li>
-        <li>Jasper Robin Hernandez</li>
-        <li>Daniela Mayormita</li>
+      <ul class="people">
+        <li><a href="https://www.jasperhernandez.site/" target="_blank" rel="noopener noreferrer">Jasper Robin Hernandez<span aria-hidden="true">&#8599;</span></a></li>
+        <li><a href="https://seanashleyreyes.com/" target="_blank" rel="noopener noreferrer">Sean Ashley Reyes<span aria-hidden="true">&#8599;</span></a></li>
         <li>Leon Antonio Puerto</li>
-        <li>Sean Ashley Reyes</li>
+        <li><a href="https://perstportfolio.vercel.app/" target="_blank" rel="noopener noreferrer">Rohn Monrhey Ba&ntilde;ares<span aria-hidden="true">&#8599;</span></a></li>
+        <li><a href="https://self-portfolio-ashi.vercel.app/" target="_blank" rel="noopener noreferrer">John Paul Buffe<span aria-hidden="true">&#8599;</span></a></li>
+        <li><a href="https://mayormita.vercel.app/" target="_blank" rel="noopener noreferrer">Daniela Mayormita<span aria-hidden="true">&#8599;</span></a></li>
       </ul>
+      <p style="font-size:12.5px;margin-top:10px">Names link to each researcher's portfolio.</p>
     </div>
     <div>
       <h3>Contact</h3>
